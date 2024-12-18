@@ -8,7 +8,7 @@ import io.cucumber.testng.CucumberOptions;
         features = "src/test/resources/features",
         glue="learningcucumber",
        // tags="@login and @valid_cred"
-        tags="@login and @invalid_cred"
+        tags="@login and @invalid_cred_outline"
 
 )
 
