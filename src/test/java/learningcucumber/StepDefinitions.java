@@ -37,16 +37,16 @@ public class StepDefinitions {
         driver.get("https://www.saucedemo.com");
     }
 
-    @When("user enters a valid username")
-    public void user_enters_a_valid_username() {
-        WebElement username = driver.findElement(By.id("user-name"));
-        username.sendKeys("standard_user");
+    @When("user enters a valid username {string}")
+    public void user_enters_a_valid_username(String username ) {
+        WebElement usernamefield = driver.findElement(By.id("user-name"));
+        usernamefield.sendKeys(username);
     }
 
-    @When("user enters a valid password")
-    public void user_enters_a_valid_password() {
-        WebElement password = driver.findElement(By.id("password"));
-        password.sendKeys("secret_sauce");
+    @When("user enters a valid password {string}")
+    public void user_enters_a_valid_password(String password) {
+        WebElement passwordfiled = driver.findElement(By.id("password"));
+        passwordfiled.sendKeys(password);
     }
 
     @When("user clicks on the login button")
